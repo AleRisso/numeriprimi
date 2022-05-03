@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lancio di un dado 1000 volte</title>
+</head>
+<body>
+   
+    <button id="miobottone"onclick="generanumeriprimi();">GENERA</button>
+    
+
+<script>
+function generanumeriprimi(){
+    for(let i=2;i<=100;i++)
+
+{
+
+
+if(isprime(i))
+{
+    document.write("<span>*"+i+"*</span><br>");
+}
+else
+{
+    document.write("<span>"+i+"</span><br>");
+}
+}
+}
+function isprime(n){
+    let bprimo=true;
+    for(let fattore=2;(fattore<=n/2)  ; fattore++)
+    {   if(n%fattore==0)
+        { 
+
+        bprimo=false;
+        }
+    }
+    return bprimo;
+}
+</script>
+
+
+</body>
+</html>
